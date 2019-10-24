@@ -1,3 +1,10 @@
 language: java
-script:
-  - ./gradlew build
+cache:
+  - bundler
+deploy:
+  provider: heroku
+  api_key:
+    secure: iNORKm34jX/402Bb/FVQAn4HlYwS5AFnhU9/zhPl+9Eqe90ukr9rJ+G/p5h5QVoN7HWGF7HfzRwzDVGquNLn9QlFg/MOA5QJrWWJ4+OTsMHsjy2g0IHr7QllRJN4CD+JGcO3gSwV/6/2Qp0WgAqR160D7ir7zo8nE9v+73xX4hfD135jeIvbcXbbcgsMefKd561pHbmy7nGC3snNbtD5Ho1K/vZ7NzXR5vcBlq9y0FVzLTPnJu/MeGCaKdpymvAou5cwzwTdqWvFt6luN70EYD+5hTS2vM8nho3Nx2TbafZE42whJi4ReunYSgI+fn1+m3MB7N4E/1ncRTWnIu0izsohvER4BtxQx5F3CUK/dwUNbyVJsMl+07MPl+/fLiuwv0sMUFs0+EEc4TkFoepgoEgl7rNu09bnw8TtZ2LsdMNU/iysKv9LCVUBz6g11xQytwodLi7x/pp0VIQuFctGHHUVH/PtuWlAeYMY5ECJo25AMkMFckicWsWnxsJSrAE6kh4HzZSMrMCp+q98UXAvn6GbcqkUX+vcGbk1Ks1XjrtOEKV7cPGF4j34YQYu957e1SXsZOhS+wIb5n0YO/gGf3hh2nj3wtCyc35znTuL5w8VsJlTK3qKkrbeOJSrc7my01th8g3Eccv1eG80ncbw4pD/f1ep98fcYj6W5uFeXk8=
+  app: continuous-delivery-gradle
+  on:
+    repo: juanrosmirez/continuous-delivery
